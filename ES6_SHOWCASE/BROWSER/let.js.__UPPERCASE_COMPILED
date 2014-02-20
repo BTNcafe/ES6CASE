@@ -1,0 +1,36 @@
+//1392916548000
+setTimeout(function(){"use strict";
+var __moduleName = (void 0);
+for (var $__0 = [1, 2, 3][$traceurRuntime.toProperty(Symbol.iterator)](),
+    $__1; !($__1 = $__0.next()).done;) {
+  try {
+    throw undefined;
+  } catch (element) {
+    element = $__1.value;
+    {
+      console.log(element);
+    }
+  }
+}
+var funcs = [];
+for (var $__2 = [4, 5, 6][$traceurRuntime.toProperty(Symbol.iterator)](),
+    $__3; !($__3 = $__2.next()).done;) {
+  try {
+    throw undefined;
+  } catch (i) {
+    i = $__3.value;
+    {
+      funcs.push(function() {
+        return i;
+      });
+    }
+  }
+}
+for (var $__4 = funcs[$traceurRuntime.toProperty(Symbol.iterator)](),
+    $__5; !($__5 = $__4.next()).done;) {
+  var func = $__5.value;
+  {
+    console.log(func());
+  }
+}
+},0);

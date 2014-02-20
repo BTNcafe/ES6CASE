@@ -1,0 +1,19 @@
+//1392916458000
+setTimeout(function(){"use strict";
+var __moduleName = (void 0);
+function push(array) {
+  var $__1;
+  for (var items = [],
+      $__0 = 1; $__0 < arguments.length; $__0++) $traceurRuntime.setProperty(items, $__0 - 1, arguments[$traceurRuntime.toProperty($__0)]);
+  ($__1 = array).push.apply($__1, $traceurRuntime.toObject(items));
+}
+function add(x, y) {
+  return x + y;
+}
+var numbers = [4, 38];
+add.apply(null, $traceurRuntime.toObject(numbers));
+var a = [1];
+var b = [2, 3, 4];
+var c = [6, 7];
+var d = $traceurRuntime.spread([0], a, b, [5], c);
+},0);

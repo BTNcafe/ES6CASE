@@ -1,0 +1,39 @@
+//1392916573000
+setTimeout(function(){"use strict";
+var __moduleName = (void 0);
+function awaitTimeout(ms) {
+  return new Promise((function(resolve) {
+    setTimeout(resolve, ms);
+  }));
+}
+function awaitOutput() {
+  return $traceurRuntime.asyncWrap(function($ctx) {
+    while (true) switch ($ctx.state) {
+      case 0:
+        console.log("Ready to await.");
+        $ctx.state = 6;
+        break;
+      case 6:
+        (awaitTimeout(1000)).then($ctx.createCallback(4), $ctx.createErrback(3));
+        return;
+      case 3:
+        throw $ctx.err;
+        $ctx.state = 4;
+        break;
+      case 4:
+        console.log("Await finished.");
+        $ctx.state = -2;
+        break;
+      case -2:
+        return;
+      case -3:
+        $ctx.reject($ctx.storedException);
+        $ctx.state = -2;
+        break;
+      default:
+        throw 'traceur compiler bug: invalid state in state machine: ' + $ctx.state;
+    }
+  }, this);
+}
+awaitOutput();
+},0);

@@ -1,0 +1,27 @@
+//1392916229000
+setTimeout(function(){"use strict";
+var __moduleName = (void 0);
+var Character = function Character() {};
+($traceurRuntime.createClass)(Character, {}, {});
+var Monster = function Monster(x, y, name) {
+  $traceurRuntime.superCall(this, $Monster.prototype, "constructor", [x, y]);
+  this.name = name;
+  this.health_ = 100;
+};
+var $Monster = Monster;
+($traceurRuntime.createClass)(Monster, {
+  attack: function(character) {
+    $traceurRuntime.superCall(this, $Monster.prototype, "attack", [character]);
+  },
+  get isAlive() {
+    return this.health > 0;
+  },
+  get health() {
+    return this.health_;
+  },
+  set health(value) {
+    if (value < 0) throw new Error('Health must be non-negative.');
+    this.health_ = value;
+  }
+}, {}, Character);
+},0);

@@ -1,0 +1,42 @@
+//1392916506000
+setTimeout(function(){"use strict";
+var __moduleName = (void 0);
+var $__0 = ['hello', [', ', 'junk'], ['world']],
+    a = $__0[$traceurRuntime.toProperty(0)],
+    b = $__0[$traceurRuntime.toProperty(1)][$traceurRuntime.toProperty(0)],
+    c = $__0[$traceurRuntime.toProperty(2)],
+    d = $__0[$traceurRuntime.toProperty(3)];
+console.log(a + b + c);
+var pt = {
+  x: 123,
+  y: 444
+};
+var rect = {
+  topLeft: {
+    x: 1,
+    y: 2
+  },
+  bottomRight: {
+    x: 3,
+    y: 4
+  }
+};
+var $__0 = pt,
+    x = $__0.x,
+    y = $__0.y;
+var $__0 = rect,
+    $__1 = $__0.topLeft,
+    x1 = $__1.x,
+    y1 = $__1.y,
+    $__2 = $__0.bottomRight,
+    x2 = $__2.x,
+    y2 = $__2.y;
+console.log(x + y);
+console.log([x1, y1, x2, y2].join(','));
+var object = {
+  value: 42,
+  toString: function() {
+    return this.value;
+  }
+};
+},0);

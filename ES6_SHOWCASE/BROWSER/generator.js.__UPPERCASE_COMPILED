@@ -1,0 +1,145 @@
+//1392916302000
+setTimeout(function(){"use strict";
+var __moduleName = (void 0);
+function Tree(left, label, right) {
+  this.left = left;
+  this.label = label;
+  this.right = right;
+}
+function inorder(t) {
+  var $__2,
+      $__3,
+      $__4,
+      $__5;
+  return $traceurRuntime.generatorWrap(function($ctx) {
+    while (true) switch ($ctx.state) {
+      case 0:
+        if (t) {
+          $ctx.state = 11;
+          break;
+        } else {
+          $ctx.state = -2;
+          break;
+        }
+      case 11:
+        $__2 = inorder(t.left)[$traceurRuntime.toProperty(Symbol.iterator)]();
+        $ctx.state = 12;
+        break;
+      case 12:
+        ;
+        $ctx.state = 14;
+        break;
+      case 14:
+        $ctx.sent = void 0;
+        $ctx.state = 16;
+        break;
+      case 16:
+        $ctx.action = 'next';
+        $ctx.state = 18;
+        break;
+      case 18:
+        if (true) {
+          $ctx.state = 3;
+          break;
+        } else {
+          $ctx.state = 10;
+          break;
+        }
+      case 3:
+        $__3 = $__2[$traceurRuntime.toProperty($ctx.action)]($ctx.sent);
+        $ctx.state = 4;
+        break;
+      case 4:
+        if ($__3.done) {
+          $ctx.state = 7;
+          break;
+        } else {
+          $ctx.state = 6;
+          break;
+        }
+      case 7:
+        $ctx.sent = $__3.value;
+        $ctx.state = 10;
+        break;
+      case 6:
+        $ctx.state = 18;
+        return $__3.value;
+      case 10:
+        $ctx.state = 20;
+        return t.label;
+      case 20:
+        if ($ctx.action === 'throw') {
+          $ctx.action = 'next';
+          throw $ctx.sent;
+        }
+        $ctx.state = 22;
+        break;
+      case 22:
+        $__4 = inorder(t.right)[$traceurRuntime.toProperty(Symbol.iterator)]();
+        $ctx.state = 34;
+        break;
+      case 34:
+        ;
+        $ctx.state = 36;
+        break;
+      case 36:
+        $ctx.sent = void 0;
+        $ctx.state = 38;
+        break;
+      case 38:
+        $ctx.action = 'next';
+        $ctx.state = 40;
+        break;
+      case 40:
+        if (true) {
+          $ctx.state = 25;
+          break;
+        } else {
+          $ctx.state = -2;
+          break;
+        }
+      case 25:
+        $__5 = $__4[$traceurRuntime.toProperty($ctx.action)]($ctx.sent);
+        $ctx.state = 26;
+        break;
+      case 26:
+        if ($__5.done) {
+          $ctx.state = 29;
+          break;
+        } else {
+          $ctx.state = 28;
+          break;
+        }
+      case 29:
+        $ctx.sent = $__5.value;
+        $ctx.state = -2;
+        break;
+      case 28:
+        $ctx.state = 40;
+        return $__5.value;
+      case -2:
+        return $ctx;
+      case -3:
+        throw $ctx.storedException;
+      default:
+        throw 'traceur compiler bug: invalid state in state machine: ' + $ctx.state;
+    }
+  }, this);
+}
+function make(array) {
+  if (array.length == 1) return new Tree(null, array[$traceurRuntime.toProperty(0)], null);
+  return new Tree(make(array[$traceurRuntime.toProperty(0)]), array[$traceurRuntime.toProperty(1)], make(array[$traceurRuntime.toProperty(2)]));
+}
+var tree = make([[['a'], 'b', ['c']], 'd', [['e'], 'f', ['g']]]);
+for (var $__0 = inorder(tree)[$traceurRuntime.toProperty(Symbol.iterator)](),
+    $__1; !($__1 = $__0.next()).done;) {
+  try {
+    throw undefined;
+  } catch (node) {
+    node = $__1.value;
+    {
+      console.log(node);
+    }
+  }
+}
+},0);
