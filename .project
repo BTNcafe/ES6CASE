@@ -8,4 +8,15 @@
 	</buildSpec>
 	<natures>
 	</natures>
+	<filteredResources>
+		<filter>
+			<id>1392949280834</id>
+			<name></name>
+			<type>22</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*.__UPPERCASE_COMPILED</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 </projectDescription>

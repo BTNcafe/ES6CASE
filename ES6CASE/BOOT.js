@@ -6,7 +6,7 @@ _BOOT = BOOT;
 
 global.BOOT = function(params) {
 
-	params.OTHER_LANGS = {
+	params.MULTI_LANG_SUPPORT = {
 		__TRACEUR_RUNTIME : function(source) {
 			return source;
 		},

@@ -3,12 +3,13 @@ VERSIONS
 1.2.9 (WORKING)
 - (WORKING) CONNECTING, DISCONNECTED 커스터마이징 기능 추가
 - (WORKING) 브라우저 비호환 페이지 커스터마이징 기능 추가
+- OTHER_LANGS -> MULTI_LANG_SUPPORT
 
 1.2.8 (2014. 2. 21)
-- BROWSER_CONFIG에서 function을 제대로 passing하도록 개선
-- 기본 스타일시트 개선
+- BROWSER_CONFIG에서 function을 완벽하게 passing하도록 개선
+- 기본 스타일시트 간소화 및 개선
 - 다른 언어 지원(OTHER_LANGS) 설정에서 js 파일도 가능하게 변경
-- 다른 언어에서 js 파일로 컴파일 후 __UPPERCASE_COMPILED 파일로 캐싱
+- 다른 언어로 부팅할 시 해당 언어의 소스코드를 js 파일로 컴파일 후 __UPPERCASE_COMPILED 파일로 캐싱
 
 1.2.7 (2014. 2. 18)
 - MODEL에 onRemove 추가
