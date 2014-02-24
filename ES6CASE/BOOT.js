@@ -25,7 +25,7 @@ global.BOOT = function(params) {
 				console.log('[ERROR!] PATH: ' + path, '\n\t- ERROR MESSAGES: ' + JSON.stringify(result.errors));
 			}
 
-			return 'setTimeout(function(){' + result.js + '},0);';
+			return '\n// run after load traceur-runtime.\nsetTimeout(function(){' + result.js + '},0);';
 		}
 	};
 

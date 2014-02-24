@@ -1,4 +1,6 @@
-//1392916573000
+//1393133789000
+
+// run after load traceur-runtime.
 setTimeout(function(){"use strict";
 var __moduleName = (void 0);
 function awaitTimeout(ms) {

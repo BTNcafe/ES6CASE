@@ -4,6 +4,7 @@ VERSIONS
 - (WORKING) CONNECTING, DISCONNECTED 커스터마이징 기능 추가
 - (WORKING) 브라우저 비호환 페이지 커스터마이징 기능 추가
 - OTHER_LANGS -> MULTI_LANG_SUPPORT
+- 원본 파일 제거 시 __UPPERCASE_COMPILED 파일도 제거
 
 1.2.8 (2014. 2. 21)
 - BROWSER_CONFIG에서 function을 완벽하게 passing하도록 개선
