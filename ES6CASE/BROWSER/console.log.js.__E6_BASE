@@ -1,0 +1,12 @@
+// 원래 UPPERCASE에서 IE를 위해 console.log를 제공하지만,
+// UPPERCASE에서 가져오기 전에 실행시켜버리는 관계로 console.log를 초기화합니다.
+
+if (global.console === undefined) {
+	global.console = {};
+}
+
+if (global.console.log === undefined) {
+	global.console.log = function() {
+		// ignore.
+	};
+}
