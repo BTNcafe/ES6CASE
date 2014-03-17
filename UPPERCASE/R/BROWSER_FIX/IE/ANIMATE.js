@@ -1,1 +1,0 @@
-OVERRIDE(ANIMATE,function(){"use strict";global.ANIMATE=METHOD({run:function(n,i,o){var t=i.duration;void 0!==o&&void 0!==t&&DELAY(function(){o()})}})});
